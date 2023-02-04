@@ -20,11 +20,11 @@ export class PlacesService {
       navigator.geolocation.getCurrentPosition(
         ({coords}) => {
           this.useLocation = [coords.longitude,coords.latitude];
-          resolve(this.useLocation)
+          resolve(this.useLocation);
         },
-        (error) => {
+        (err) => {
           alert('No se pudo obtener la geolocalizacion');
-          console.log(error);
+          console.log(err);
           reject();
         }
 
