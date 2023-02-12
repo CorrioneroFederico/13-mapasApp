@@ -7,7 +7,7 @@ export class PlacesService {
 
   public useLocation?:[number,number];
 
-  isUserLocationReady():boolean{
+  get isUserLocationReady():boolean{
     return !!this.useLocation
   }
   constructor() {
