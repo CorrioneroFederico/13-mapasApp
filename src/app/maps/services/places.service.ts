@@ -61,7 +61,7 @@ export class PlacesService {
       console.log(response.features);
       this.isLoadingPlaces = false;
       this.places = response.features;
-      this._mapService.createMarkerFromPlaces(this.places);
+      this._mapService.createMarkerFromPlaces(this.places, this.useLocation!);
     });
   }
 }
